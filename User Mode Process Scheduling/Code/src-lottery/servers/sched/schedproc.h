@@ -30,9 +30,9 @@ EXTERN struct schedproc {
 	unsigned priority;		/* the process' current priority */
 	unsigned time_slice;		/* this process's time slice */
 	unsigned cpu;		/* what CPU is the process running on */
-	// 577 Lab 2 start
+	// Edit start
 	unsigned tickets;   /* how many tickets are assigned to the process */
-	// 577 Lab 2 end
+	// Edit end
 	bitchunk_t cpu_mask[BITMAP_CHUNKS(CONFIG_MAX_CPUS)]; /* what CPUs is hte
 								process allowed
 								to run on */

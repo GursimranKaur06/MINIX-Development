@@ -112,7 +112,7 @@ int sched_nice(struct mproc *rmp, int nice)
 }
 
 /*===========================================================================*
- *				577 Lab 2: sched_assign_tickets				     *
+ *				Edit : sched_assign_tickets				     *
  *===========================================================================*/
 int sched_assign_tickets(struct mproc *rmp, int tickets)
 {

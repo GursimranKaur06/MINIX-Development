@@ -43,13 +43,13 @@ static phys_bytes mem_low, mem_high;
 static void free_pages(phys_bytes addr, int pages);
 static phys_bytes alloc_pages(int pages, int flags);
 
-// 577 Lab 3
+// Edit
 struct hole {
 	int start;
 	int len;
 } holemap[NUMBER_PHYSICAL_PAGES];
 static int get_all_holes(int memflags);
-// 577 Lab 3
+// Edit
 
 #if SANITYCHECKS
 struct {
@@ -320,7 +320,7 @@ void printmemstats(void)
 		largest, (unsigned long) largest * (VM_PAGE_SIZE/1024));
 }
 
-// 577 Lab 3
+// Edit
 /*===========================================================================*
  *				print_holes				     *
  *===========================================================================*/
@@ -381,7 +381,7 @@ static int get_all_holes(int memflags)
 
 	return nbr_holes;
 }
-// 577 Lab 3
+// Edit
 
 #if SANITYCHECKS
 

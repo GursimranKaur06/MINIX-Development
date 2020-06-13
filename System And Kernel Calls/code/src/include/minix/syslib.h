@@ -245,10 +245,10 @@ int sys_setmcontext(endpoint_t proc, mcontext_t *mcp);
 /* input */
 int tty_input_inject(int type, int code, int val);
 
-// 577 Lab 1 start
+// edit start
 /* calc */
 int sys_calc_mul(int multiplicand, int multiplier);
-// 577 Lab 1 end
+// edit end
 
 #endif /* _SYSLIB_H */
 

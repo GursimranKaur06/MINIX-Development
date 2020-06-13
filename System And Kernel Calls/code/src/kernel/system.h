@@ -207,9 +207,9 @@ int do_statectl(struct proc * caller, message *m_ptr);
 #define do_statectl NULL
 #endif
 
-// 577 Lab 1 edit end
+// edit start
 int do_multiply(struct proc * caller, message *m_ptr);
-// 577 Lab 1 edit end
+// edit end
 
 #endif	/* SYSTEM_H */
 

@@ -428,9 +428,9 @@ void init_vm(void)
 	CALLMAP(VM_SHM_UNMAP, do_munmap);
 	CALLMAP(VM_GETREF, do_get_refcount);
 	CALLMAP(VM_INFO, do_info);
-	// 577 Lab 3
+	// Edit
 	CALLMAP(VM_PRINT_HOLES, do_print_holes);
-	// 577 Lab 3
+	// Edit
 	CALLMAP(VM_QUERY_EXIT, do_query_exit);
 	CALLMAP(VM_WATCH_EXIT, do_watch_exit);
 	CALLMAP(VM_FORGETBLOCKS, do_forgetblocks);

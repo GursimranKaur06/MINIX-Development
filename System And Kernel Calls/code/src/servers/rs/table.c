@@ -25,9 +25,9 @@ struct boot_image_priv boot_image_priv_table[] = {
 {LOG_PROC_NR,  "log",    SRV_F  },
 {MFS_PROC_NR,"fs_imgrd", SRV_F  },
 {PFS_PROC_NR,  "pfs",    SRV_F  },
-// 577 Lab 1 start
+// edit start
 {CALC_PROC_NR, "calc",   SRV_F  },
-// 577 Lab 1 end
+// edit end
 {INIT_PROC_NR, "init",   USR_F  },
 {NULL_BOOT_NR, "",       0,     } /* null entry */
 };
@@ -42,9 +42,9 @@ struct boot_image_sys boot_image_sys_table[] = {
   { LOG_PROC_NR,      SRV_SF                            },
   { MFS_PROC_NR,      0                                 },
   { PFS_PROC_NR,      SRV_SF                            },
-  // 577 Lab 1 start
+  // edit start
   { CALC_PROC_NR,     SRV_SF                            },
-  // 577 Lab 1 end
+  // edit end
   { DEFAULT_BOOT_NR,  SRV_SF                            } /* default entry */
 };
 

@@ -824,9 +824,9 @@ struct
 	{ "STIME",		SYS_STIME },
 	{ "VMCTL",		SYS_VMCTL },
 	{ "MEMSET",		SYS_MEMSET },
-	// 577 Lab 1 start
+	// edit start
     { "CALC_MUL", 	SYS_CALC_MUL },
-    // 577 Lab 1 end
+    // edit end
 	{ NULL,		0 }
 };
 

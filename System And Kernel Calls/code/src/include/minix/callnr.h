@@ -66,11 +66,11 @@
 #define GETMCONTEXT       67
 #define SETMCONTEXT       68
 
-// 577 Lab 1 start
+// edit start
 /* Calc */
 #define ADD           69
 #define MULTIPLY	  70
-// 577 Lab 1 end
+// edit end
 
 /* Posix signal handling. */
 #define SIGACTION	  71

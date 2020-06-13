@@ -87,7 +87,7 @@ SRCS+=  \
 	vm_yield_get_block.c \
 	vm_procctl.c \
 	vprintf.c \
-	sys_calc_mul.c  # 577 Lab 1
+	sys_calc_mul.c  # edit
 
 .if ${MKPCI} != "no"
 SRCS+=	pci_attr_r16.c \

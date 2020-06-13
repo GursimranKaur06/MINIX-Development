@@ -1163,11 +1163,11 @@
 /* SCHEDULING_INHERIT is like SCHEDULING_START, but without _QUANTUM field */
 #define SCHEDULING_INHERIT	(SCHEDULING_BASE+5)
 
-// 577 Lab 2 start
+// edit start
 /* Set the lottery tickets assigned to a process */
 #define SCHEDULING_SET_TICKETS  (SCHEDULING_BASE+6)
 #define SCHEDULING_TICKETS  m9_l2
-// 577 Lab 2 end
+// edit end
 
 /*===========================================================================*
  *              Messages for USB                                             *

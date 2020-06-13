@@ -43,13 +43,13 @@ static phys_bytes mem_low, mem_high;
 static void free_pages(phys_bytes addr, int pages);
 static phys_bytes alloc_pages(int pages, int flags);
 
-// 577 Lab 3
+// Edit
 struct hole {
 	int start;
 	int len;
 } holemap[NUMBER_PHYSICAL_PAGES];
 static int get_all_holes(int memflags);
-// 577 Lab 3
+// Edit
 
 #if SANITYCHECKS
 struct {
@@ -214,7 +214,7 @@ static int findbit(int low, int startscan, int pages, int memflags, int *len)
 			if(moved) { i = chunk * BITCHUNK_BITS + BITCHUNK_BITS; }
 			continue;
 		}
-		// 577 Lab 3
+		// Edit
 		if(!run_length) { freerange_start = i; run_length = 1; }
         else { freerange_start--; run_length++; }
         //assert(run_length <= pages);
@@ -225,15 +225,15 @@ static int findbit(int low, int startscan, int pages, int memflags, int *len)
             last_freerange_start = freerange_start;
             run_length = 0;
         }
-		// 577 Lab 3
+		// Edit
 	}
 
-	// 577 Lab 3
+	// Edit
 	if (f) {
         *len = last_run_length;
         return last_freerange_start;
     }
-	// 577 Lab 3
+	// Edit
 
 	return NO_MEM;
 }
@@ -332,7 +332,7 @@ void printmemstats(void)
 		largest, (unsigned long) largest * (VM_PAGE_SIZE/1024));
 }
 
-// 577 Lab 3
+// Edit
 /*===========================================================================*
  *				print_holes				     *
  *===========================================================================*/
@@ -393,7 +393,7 @@ static int get_all_holes(int memflags)
 
 	return nbr_holes;
 }
-// 577 Lab 3
+// Edit
 
 #if SANITYCHECKS
 

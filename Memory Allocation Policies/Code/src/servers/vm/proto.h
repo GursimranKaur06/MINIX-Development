@@ -22,9 +22,9 @@ void mem_sanitycheck(char *file, int line);
 phys_clicks alloc_mem(phys_clicks clicks, u32_t flags);
 void memstats(int *nodes, int *pages, int *largest);
 void printmemstats(void);
-// 577 Lab 3
+// Edit
 void print_holes(int);
-// 577 Lab 3
+// Edit
 void usedpages_reset(void);
 int usedpages_add_f(phys_bytes phys, phys_bytes len, char *file, int
 	line);
@@ -39,9 +39,9 @@ void get_mem_chunks(struct memory *mem_chunks);
 int vm_isokendpt(endpoint_t ep, int *proc);
 int get_stack_ptr(int proc_nr, vir_bytes *sp);
 int do_info(message *);
-// 577 Lab 3
+// Edit
 int do_print_holes(message *);
-// 577 Lab 3
+// Edit
 int swap_proc_slot(struct vmproc *src_vmp, struct vmproc *dst_vmp);
 int swap_proc_dyn_data(struct vmproc *src_vmp, struct vmproc *dst_vmp);
 

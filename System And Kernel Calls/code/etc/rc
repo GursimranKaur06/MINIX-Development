@@ -163,9 +163,9 @@ start)
 	edit -p log
 	edit -c pfs
 	edit init
-    # 577 Lab 1 start
+    # edit start
     edit calc
-    # 577 Lab 1 end
+    # edit end
     fi
 
     # This file is necessary for above 'shutdown -C' check.

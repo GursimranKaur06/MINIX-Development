@@ -99,7 +99,7 @@ int do_noquantum(message *m_ptr)
 	}
 
 	rmp = &schedproc[proc_nr_n];
-	// 577 Lab 2 start
+	// Edit start
 	// if (rmp->priority < MIN_USER_Q) {
 		// rmp->priority += 1; /* lower priority */
 	// }
@@ -113,7 +113,7 @@ int do_noquantum(message *m_ptr)
 	return schedule_lottery();
 
 	// return OK;
-	// 577 Lab 2 end
+	// Edit end
 }
 
 /*===========================================================================*
@@ -140,9 +140,9 @@ int do_stop_scheduling(message *m_ptr)
 #endif
 	rmp->flags = 0; /*&= ~IN_USE;*/
 
-	// 577 Lab 2 start
+	// Edit start
 	schedule_lottery();
-	// 577 Lab 2 end
+	// Edit end
 
 	return OK;
 }
@@ -218,10 +218,10 @@ int do_start_scheduling(message *m_ptr)
 				&parent_nr_n)) != OK)
 			return rv;
 
-		// 577 Lab 2 begin
+		// Edit begin
 		// rmp->priority = USER_Q; // schedproc[parent_nr_n].priority;
 		rmp->priority = schedproc[parent_nr_n].priority;
-		// 577 Lab 2 end
+		// Edit end
 		rmp->time_slice = schedproc[parent_nr_n].time_slice;
 		rmp->tickets = 1;
 		break;
@@ -344,7 +344,7 @@ static int schedule_process(struct schedproc * rmp, unsigned flags)
 }
 
 /*===========================================================================*
- *				577 Lab 2: do_set_tickets			     *
+ *				Edit : do_set_tickets			     *
  *===========================================================================*/
 int do_set_tickets(message *m_ptr)
 {
@@ -379,10 +379,10 @@ int do_set_tickets(message *m_ptr)
 void init_scheduling(void)
 {
 	balance_timeout = BALANCE_TIMEOUT * sys_hz();
-	// 577 Lab 2 start
+	// Edit start
 	// init_timer(&sched_timer);
 	// set_timer(&sched_timer, balance_timeout, balance_queues, 0);
-	// 577 Lab 2 end
+	// Edit end
 }
 
 /*===========================================================================*
@@ -412,7 +412,7 @@ static void balance_queues(struct timer *tp)
 }
 
 /*===========================================================================*
- *				577 Lab 2: schedule_lottery				     *
+ *				Edit : schedule_lottery				     *
  *===========================================================================*/
 
 /* This is a lottery scheduling implementation.

@@ -6,7 +6,7 @@
 
 int main(int argc, char *argv[])
 {
-    //Allocate Memory
+    // Allocate Memory
     int pages_to_alloc = 10;
 
     if (argc > 2) {
@@ -20,7 +20,7 @@ int main(int argc, char *argv[])
         return 1;
     }
 
-    //Fill Memory
+    // Fill Memory
     if(argc > 1)
         strcpy(region, strcat("Hello Region ", argv[1]));
     else

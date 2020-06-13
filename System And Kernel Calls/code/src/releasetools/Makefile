@@ -32,9 +32,9 @@ PROGRAMS+= ${PROGROOT}/servers/mfs/mfs
 PROGRAMS+= ${PROGROOT}/servers/vm/vm
 PROGRAMS+= ${PROGROOT}/servers/pfs/pfs
 PROGRAMS+= ${PROGROOT}/servers/init/init
-# 577 Lab 1 begin
+# edit start
 PROGRAMS+= ${PROGROOT}/servers/calc/calc
-# 577 Lab 1 end
+# edit end
 
 usage:
 	@echo " " >&2

@@ -66,10 +66,10 @@
 #define GETMCONTEXT       67
 #define SETMCONTEXT       68
 
-// 577 Lab 2 start
+// edit start
 /* Assign tickets */
 #define ASSIGN_TICKETS 69 /* to PM: set the lottery tickets assigned to the process */
-// 577 Lab 2 end
+// edit end
 
 /* Posix signal handling. */
 #define SIGACTION	  71

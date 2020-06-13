@@ -1047,13 +1047,13 @@
 #	define VMI_PTR			m2_p1
 #	define VMI_NEXT			m2_l1
 
-// 577 Lab 3
+// Edit
 /* to VM: print all holes that can be used for allocation
  * to /var/holes
  */
 #define VM_PRINT_HOLES	(VM_RQ_BASE+46)
 #	define VM_PRINT_HOLES_MIN_LEN	m1_i1
-// 577 Lab 3
+// Edit
 
 /* VMI_WHAT values. */
 #define VMIW_STATS			1
@@ -1083,9 +1083,9 @@
 #define VMPPARAM_CLEAR		1	/* values for VMPCTL_PARAM */
 
 /* Total. */
-// 577 Lab 3
+// Edit
 #define NR_VM_CALLS				47
-// 577 Lab 3
+// Edit
 #define VM_CALL_MASK_SIZE			BITMAP_CHUNKS(NR_VM_CALLS)
 
 /* not handled as a normal VM call, thus at the end of the reserved rage */
@@ -1093,13 +1093,13 @@
 #	define VPF_ADDR		m1_i1
 #	define VPF_FLAGS	m1_i2
 
-// 577 Lab 3
+// Edit
 /* Basic vm calls allowed to every process. */
 #define VM_BASIC_CALLS \
     VM_MMAP, VM_MUNMAP, VM_MAP_PHYS, VM_UNMAP_PHYS, \
     VM_FORGETBLOCKS, VM_FORGETBLOCK, VM_YIELDBLOCKGETBLOCK, VM_INFO, \
 	VM_PRINT_HOLES
-// 577 Lab 3
+// Edit
 
 /*===========================================================================*
  *                Messages for IPC server				     *

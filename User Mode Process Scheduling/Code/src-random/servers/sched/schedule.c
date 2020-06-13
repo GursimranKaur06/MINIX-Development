@@ -92,10 +92,10 @@ static void pick_cpu(struct schedproc * proc)
 int do_noquantum(message *m_ptr)
 {
 	register struct schedproc *rmp;
-	// 577 Lab 2
+	// Edit
 	// int rv, proc_nr_n;
 	int proc_nr_n;
-	// 577 Lab 2
+	// Edit
 
 	if (sched_isokendpt(m_ptr->m_source, &proc_nr_n) != OK) {
 		printf("SCHED: WARNING: got an invalid endpoint in OOQ msg %u.\n",
@@ -104,7 +104,7 @@ int do_noquantum(message *m_ptr)
 	}
 
 	rmp = &schedproc[proc_nr_n];
-	// 577 Lab 2
+	// Edit
 	// if (rmp->priority < MIN_USER_Q) {
 	// 	rmp->priority += 1; /* lower priority */
 	// }
@@ -121,7 +121,7 @@ int do_noquantum(message *m_ptr)
     // if ((rv = schedule_process_local(rmp)) != OK) {
 	//	return rv;
 	// }
-    // 577 Lab 2
+    // Edit
 
 	return OK;
 }
@@ -150,9 +150,9 @@ int do_stop_scheduling(message *m_ptr)
 #endif
 	rmp->flags = 0; /*&= ~IN_USE;*/
 
-	// 577 Lab 2
+	// Edit
 	random_sched();
-	// 577 Lab 2
+	// Edit
 
 	return OK;
 }
@@ -227,10 +227,10 @@ int do_start_scheduling(message *m_ptr)
 				&parent_nr_n)) != OK)
 			return rv;
 
-		// 577 Lab 2
+		// Edit
 		// rmp->priority = schedproc[parent_nr_n].priority;
 		rmp->priority = USER_Q;
-		// 577 Lab 2
+		// Edit
 		rmp->time_slice = schedproc[parent_nr_n].time_slice;
 		break;
 

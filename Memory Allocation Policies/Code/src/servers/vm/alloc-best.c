@@ -43,13 +43,13 @@ static phys_bytes mem_low, mem_high;
 static void free_pages(phys_bytes addr, int pages);
 static phys_bytes alloc_pages(int pages, int flags);
 
-// 577 Lab 3
+// Edit
 struct hole {
 	int start;
 	int len;
 } holemap[NUMBER_PHYSICAL_PAGES];
 static int get_all_holes(int memflags);
-// 577 Lab 3
+// Edit
 
 #if SANITYCHECKS
 struct {
@@ -196,7 +196,7 @@ void memstats(int *nodes, int *pages, int *largest)
 
 static int findbit(int low, int startscan, int pages, int memflags, int *len)
 {
-	// 577 Lab 3
+	// Edit
 	int nbr_holes = get_all_holes(memflags);
 
 	if (nbr_holes == 0) {
@@ -225,7 +225,7 @@ static int findbit(int low, int startscan, int pages, int memflags, int *len)
 
 	*len = best.len;
 	return best.start;
-	// 577 Lab 3
+	// Edit
 }
 
 /*===========================================================================*
@@ -237,7 +237,7 @@ static phys_bytes alloc_pages(int pages, int memflags)
 	phys_bytes boundary1  =  1 * 1024 * 1024 / VM_PAGE_SIZE;
 	phys_bytes mem = NO_MEM;
 	int maxpage = NUMBER_PHYSICAL_PAGES - 1, i;
-	// 577 Lab 3
+	// Edit
 	int run_length;
 
 	if(memflags & PAF_LOWER16MB)
@@ -261,14 +261,14 @@ static phys_bytes alloc_pages(int pages, int memflags)
 		}
 	}
 
-	// 577 Lab 3
+	// Edit
 	if(mem == NO_MEM)
 		mem = findbit(0, maxpage, pages, memflags, &run_length);
-	// 577 Lab 3
+	// Edit
 	if(mem == NO_MEM)
 		return NO_MEM;
 
-	// 577 Lab 3
+	// Edit
 
 	for(i = mem; i < mem + pages; i++) {
 		UNSET_BIT(free_pages_bitmap, i);
@@ -317,7 +317,7 @@ void printmemstats(void)
 		largest, (unsigned long) largest * (VM_PAGE_SIZE/1024));
 }
 
-// 577 Lab 3
+// Edit
 /*===========================================================================*
  *				print_holes				     *
  *===========================================================================*/
@@ -378,7 +378,7 @@ static int get_all_holes(int memflags)
 
 	return nbr_holes;
 }
-// 577 Lab 3
+// Edit
 
 #if SANITYCHECKS
 

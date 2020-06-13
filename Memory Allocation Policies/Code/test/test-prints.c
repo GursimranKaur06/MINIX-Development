@@ -7,7 +7,7 @@
 
 int main(int argc, char *argv[])
 {
-    //Allocate Memory
+    // Allocate Memory
     int pages_to_alloc = 10;
 
     if (argc > 2) {
@@ -23,7 +23,7 @@ int main(int argc, char *argv[])
         return 1;
     }
 
-    //Fill Memory
+    // Fill Memory
     if(argc > 1)
         strcpy(region, strcat("Hello Region ", argv[1]));
     else
@@ -32,7 +32,7 @@ int main(int argc, char *argv[])
 
     print_memory_holes(0);
 
-    //Release Memory
+    // Release Memory
     int unmap_result = minix_munmap(region, PSIZE * pages_to_alloc);
     if (unmap_result != 0) {
         perror("Could not munmap");

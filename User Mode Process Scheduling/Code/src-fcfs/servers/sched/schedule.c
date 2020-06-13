@@ -84,7 +84,7 @@ static void pick_cpu(struct schedproc * proc)
 }
 
 /*===========================================================================*
-*				577 Edit				     *
+*				Edit				     *
 *===========================================================================*/
 unsigned idcounter = 0;
 int fcfs_algorithm(){
@@ -126,10 +126,10 @@ int do_noquantum(message *m_ptr)
 
 	rmp = &schedproc[proc_nr_n];
 
-	// 577 edit start
+	// edit start
 	printf("Process %d finished Q and was in queue %d.\n", rmp->id,rmp->priority);
 	if (rmp->priority < MIN_USER_Q) {
-		rmp->priority += 0; /* lower priority 577 edit*/
+		rmp->priority += 0; /* lower priority edit*/
 	}
 
 	if((rv = schedule_process_local(rmp)) != OK) {
@@ -140,7 +140,7 @@ int do_noquantum(message *m_ptr)
 	schedule_process_local(rmp);
 
 	fcfs_algorithm();
-	// 577 edit done
+	// edit done
 	return OK;
 }
 
@@ -167,9 +167,9 @@ int do_stop_scheduling(message *m_ptr)
 	cpu_proc[rmp->cpu]--;
 #endif
 	rmp->flags = 0; /*&= ~IN_USE;*/
-	//577 edit start
+	// edit start
 	fcfs_algorithm();
-	//577 edit end
+	// edit end
 	return OK;
 }
 
@@ -203,9 +203,9 @@ int do_start_scheduling(message *m_ptr)
 	if (rmp->max_priority >= NR_SCHED_QUEUES) {
 		return EINVAL;
 	}
-	// 577 edit start
+	// edit start
 	rmp->id = ++idcounter;
-	// 577 edit end
+	// edit end
 	/* Inherit current priority and time slice from parent. Since there
 	 * is currently only one scheduler scheduling the whole system, this
 	 * value is local and we assert that the parent endpoint is valid */
@@ -244,9 +244,9 @@ int do_start_scheduling(message *m_ptr)
 		if ((rv = sched_isokendpt(m_ptr->SCHEDULING_PARENT,
 				&parent_nr_n)) != OK)
 			return rv;
-		// 577 edit start
+		// edit start
 		rmp->priority = USER_Q; //schedproc[parent_nr_n].priority;
-		// 577 edit end
+		// edit end
 		rmp->time_slice = schedproc[parent_nr_n].time_slice;
 		break;
 

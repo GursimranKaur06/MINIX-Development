@@ -81,11 +81,11 @@
 #define PFS_PROC_NR  ((endpoint_t) 9)  /* pipe filesystem */
 #define SCHED_PROC_NR ((endpoint_t) 10)	/* scheduler */
 
-// 577 Lab 1 start
+// edit start
 #define CALC_PROC_NR  ((endpoint_t) 11) /* calc server */
 #define LAST_SPECIAL_PROC_NR	12	/* An untyped version for
                                            computation in macros.*/
-// 577 Lab 1 end
+// edit end
 #define INIT_PROC_NR ((endpoint_t) LAST_SPECIAL_PROC_NR)  /* init
                                                         -- goes multiuser */
 #define NR_BOOT_MODULES (INIT_PROC_NR+1)
@@ -356,12 +356,12 @@
 
 #  define SYS_SAFEMEMSET (KERNEL_CALL + 56)	/* sys_safememset() */
 
-// 577 Lab 1 start
+// edit start
 #  define SYS_CALC_MUL  (KERNEL_CALL + 57)  /* sys_cal_mul() */
 
 /* Total */
 #define NR_SYS_CALLS	58	/* number of kernel calls */
-// 577 Lab 1 end
+// edit end
 
 #define SYS_CALL_MASK_SIZE BITMAP_CHUNKS(NR_SYS_CALLS)
 

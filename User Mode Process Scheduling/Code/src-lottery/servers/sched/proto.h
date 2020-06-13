@@ -12,10 +12,10 @@ int do_noquantum(message *m_ptr);
 int do_start_scheduling(message *m_ptr);
 int do_stop_scheduling(message *m_ptr);
 int do_nice(message *m_ptr);
-// 577 Lab 2 start
+// Edit start
 int do_set_tickets(message *m_ptr);
 int schedule_lottery();
-// 577 Lab 2 end
+// Edit end
 void init_scheduling(void);
 
 /* utility.c */
